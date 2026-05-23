@@ -1,0 +1,1 @@
+<?php if (!function_exists('convert_html_to_text')) { function convert_html_to_text($html) { return strip_tags($html); } }
