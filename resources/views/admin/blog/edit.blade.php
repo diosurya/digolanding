@@ -238,9 +238,19 @@
     });
 
     var form = document.querySelector('form');
-    form.onsubmit = function() {
+    form.onsubmit = function(e) {
         var content = document.querySelector('input[name=content]');
-        content.value = quill.root.innerHTML;
+        var html = quill.root.innerHTML;
+        
+        // Check if content is empty
+        if (quill.getText().trim().length === 0 && !html.includes('<img')) {
+            alert('Konten artikel tidak boleh kosong!');
+            e.preventDefault();
+            return false;
+        }
+        
+        content.value = html;
+        return true;
     };
 
     function previewImage(input) {
