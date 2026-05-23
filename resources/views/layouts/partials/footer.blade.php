@@ -17,7 +17,7 @@
         <div>
             <h4 class="text-slate-900 font-bold mb-8 uppercase tracking-widest text-xs">Aplikasi</h4>
             <ul class="space-y-4 text-slate-500 text-sm">
-                <li><a href="/login" class="hover:text-odoo-purple transition">Smart POS</a></li>
+                <li><a href="https://pos.digosoft.id" target="_blank" class="hover:text-odoo-purple transition">Smart POS</a></li>
                 <li><a href="https://crm.digosoft.id" class="hover:text-odoo-purple transition">Advanced CRM</a></li>
                 <li><a href="https://creative.digosoft.id/" class="hover:text-odoo-purple transition">Undangan Online</a></li>
             </ul>

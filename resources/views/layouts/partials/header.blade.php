@@ -19,8 +19,8 @@
         </a>
     </div>
     <div class="flex items-center gap-4">
-        <a href="/login" class="bg-odoo-teal hover:opacity-90 text-white px-6 py-2.5 rounded-lg font-bold transition shadow-lg shadow-odoo-teal/20 text-xs uppercase tracking-wider">
-            Mulai Sekarang
+        <a href="https://wa.me/6281331945656" target="_blank" class="bg-odoo-teal hover:opacity-90 text-white px-6 py-2.5 rounded-lg font-bold transition shadow-lg shadow-odoo-teal/20 text-xs uppercase tracking-wider">
+            Hubungi Kami
         </a>
     </div>
 </nav>
