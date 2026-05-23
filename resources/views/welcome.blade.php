@@ -295,7 +295,7 @@
                     </div>
                     <h3 class="text-2xl font-black text-slate-900 mb-4 uppercase">Aplikasi Website</h3>        
                     <p class="text-slate-500 mb-8 leading-relaxed">Layanan <strong>Jasa Pembuatan Website</strong> undangan digital profesional dengan fitur RSVP instan.</p>
-                    <a href="https://undangan.digosoft.id" target="_blank" class="inline-flex items-center gap-2 text-amber-600 font-black text-xs uppercase tracking-widest border-b-2 border-amber-500/20 pb-1 hover:border-amber-500 transition-all">Buat Undangan <i data-lucide="external-link" class="w-4 h-4"></i></a>
+                    <a href="https://creative.digosoft.id/" target="_blank" class="inline-flex items-center gap-2 text-amber-600 font-black text-xs uppercase tracking-widest border-b-2 border-amber-500/20 pb-1 hover:border-amber-500 transition-all">Buat Undangan <i data-lucide="external-link" class="w-4 h-4"></i></a>
                 </div>
             </div>
         </div>

@@ -19,7 +19,7 @@
             <ul class="space-y-4 text-slate-500 text-sm">
                 <li><a href="/login" class="hover:text-odoo-purple transition">Smart POS</a></li>
                 <li><a href="https://crm.digosoft.id" class="hover:text-odoo-purple transition">Advanced CRM</a></li>
-                <li><a href="https://undangan.digosoft.id" class="hover:text-odoo-purple transition">Undangan Online</a></li>
+                <li><a href="https://creative.digosoft.id/" class="hover:text-odoo-purple transition">Undangan Online</a></li>
             </ul>
         </div>
 
