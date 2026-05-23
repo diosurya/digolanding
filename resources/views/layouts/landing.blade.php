@@ -11,16 +11,17 @@
     <meta name="author" content="DIGOSOFT Group">
 
     <!-- Social Media Meta Tags -->
-    <meta property="og:title" content="DIGOSOFT - Sistem POS & ERP Retail Terintegrasi">
-    <meta property="og:description" content="Kelola bisnis lebih cerdas dengan ekosistem retail masa depan.">
-    <meta property="og:image" content="{{ asset('template/dist/assets/images/Digosoft.png') }}">
-    <meta property="og:url" content="{{ url('/') }}">
+    @yield('social_meta')
+    <meta property="og:title" content="@if(View::hasSection('title')) @yield('title') @else DIGOSOFT - Jasa Pembuatan Website, Aplikasi Kasir POS & ERP Terintegrasi @endif">
+    <meta property="og:description" content="@if(View::hasSection('meta_description')) @yield('meta_description') @else DIGOSOFT adalah Software House penyedia jasa pembuatan website profesional, aplikasi kasir (POS), sistem ERP retail, Solusi Jasa Pembuatan Website profesional, Aplikasi Kasir (POS) siap pakai, hingga pengembangan Aplikasi Mobile Custom. @endif">
+    <meta property="og:image" content="@if(View::hasSection('og_image')) @yield('og_image') @else {{ asset('template/dist/assets/images/Digosoft.png') }} @endif">
+    <meta property="og:url" content="{{ url()->current() }}">
     <meta property="og:type" content="website">
 
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:title" content="DIGOSOFT - Sistem POS & ERP Retail Terintegrasi">
-    <meta property="twitter:description" content="Kelola bisnis lebih cerdas dengan ekosistem retail masa depan.">
-    <meta property="twitter:image" content="{{ asset('template/dist/assets/images/Digosoft.png') }}">
+    <meta property="twitter:title" content="@if(View::hasSection('title')) @yield('title') @else DIGOSOFT - Jasa Pembuatan Website, Aplikasi Kasir POS & ERP Terintegrasi @endif">
+    <meta property="twitter:description" content="@if(View::hasSection('meta_description')) @yield('meta_description') @else DIGOSOFT adalah Software House penyedia jasa pembuatan website profesional, aplikasi kasir (POS), sistem ERP retail, Solusi Jasa Pembuatan Website profesional, Aplikasi Kasir (POS) siap pakai, hingga pengembangan Aplikasi Mobile Custom. @endif">
+    <meta property="twitter:image" content="@if(View::hasSection('og_image')) @yield('og_image') @else {{ asset('template/dist/assets/images/Digosoft.png') }} @endif">
 
     <!-- Favicon -->
     <link rel="icon" href="/template/dist/assets/images/favicon-digosoft.png" type="image/x-icon">

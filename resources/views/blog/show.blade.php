@@ -3,6 +3,10 @@
 @section('title', $post->meta_title ?? $post->title . ' - DIGOSOFT')
 @section('meta_description', $post->meta_description)
 
+@if($post->featured_image)
+    @section('og_image', asset('storage/' . $post->featured_image))
+@endif
+
 @section('content')
     <article class="pt-32 pb-20 px-6">
         <div class="max-w-4xl mx-auto">
