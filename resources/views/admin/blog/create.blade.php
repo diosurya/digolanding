@@ -4,7 +4,7 @@
 
 @section('content')
 <div class="max-w-5xl">
-    <form action="{{ route('admin.blog.store') }}" method="POST" enctype="multipart/form-data">
+    <form action="{{ route('admin.blog.store') }}" method="POST" enctype="multipart/form-data" id="blog-form">
         @csrf
 
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
@@ -39,8 +39,8 @@
 
                     <div class="mb-6">
                         <label class="block text-[10px] font-black text-slate-400 uppercase tracking-[0.2em] mb-2">Konten</label>
-                        <div id="editor-container" class="h-96 rounded-2xl border-slate-100 bg-slate-50 overflow-hidden"></div>
-                        <input type="hidden" name="content" id="content">
+                        <div id="editor-container" class="h-96 rounded-2xl border-slate-100 bg-slate-50 overflow-hidden">{!! old('content') !!}</div>
+                        <input type="hidden" name="content" id="content" value="{{ old('content') }}">
                         @error('content') <p class="mt-2 text-xs text-rose-500 font-bold">{{ $message }}</p> @enderror
                     </div>
                 </div>
@@ -234,12 +234,15 @@
             metaDescInput.value = text;
         }
         metaDescInput.setAttribute('data-prev', text);
+        
+        // Also sync content to hidden input on change
+        document.getElementById('content').value = quill.root.innerHTML;
     });
 
-    var form = document.querySelector('form');
-    form.onsubmit = function(e) {
-        var content = document.querySelector('input[name=content]');
-        var html = quill.root.innerHTML;
+    const blogForm = document.getElementById('blog-form');
+    blogForm.addEventListener('submit', function(e) {
+        const contentInput = document.getElementById('content');
+        const html = quill.root.innerHTML;
         
         // Check if content is empty (Quill empty state is often <p><br></p>)
         if (quill.getText().trim().length === 0 && !html.includes('<img')) {
@@ -248,9 +251,9 @@
             return false;
         }
         
-        content.value = html;
+        contentInput.value = html;
         return true;
-    };
+    });
 
     function previewImage(input) {
         const preview = document.getElementById('preview-image');
